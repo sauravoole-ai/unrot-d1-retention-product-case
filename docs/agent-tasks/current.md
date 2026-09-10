@@ -6,7 +6,7 @@ Prepare the existing validated static Unrot D1 Retention prototype for a credibl
 
 ## Current phase
 
-Slice 3 is blocked before Git initialization and publication.
+Slice 3 is complete; Slice 4 is next.
 
 ## Completed work
 
@@ -20,6 +20,7 @@ Slice 3 is blocked before Git initialization and publication.
 - Added a minimal Node-standard-library regression test for state restoration.
 - Added a root `.gitignore`, Node-standard-library package scripts, a concise recruiter-facing README, and a product-case document.
 - Expanded deterministic coverage for quiz scoring, prompt strength, malformed proof handling, and share-link construction.
+- Initialized Git on `main`, created the intended public GitHub repository, pushed the verified initial commit, and added repository topics.
 
 ## Baseline checks
 
@@ -52,12 +53,12 @@ Slice 3 is blocked before Git initialization and publication.
 
 1. **Slice 1 — product + code hardening:** complete. It added a tested localStorage-state normalization boundary and CSS focus/reduced-motion safeguards.
 2. **Slice 2 — tests, documentation, and portfolio polish:** complete. It added lightweight deterministic verification, package scripts, root exclusions, README, and product-case documentation.
-3. **Slice 3 — GitHub publication:** initialize and curate Git history; inspect GitHub authentication and existing remotes before creating or publishing only the intended repository.
+3. **Slice 3 — GitHub publication:** complete. The intended public repository was created and `main` was pushed without force-pushing or creating a duplicate.
 4. **Slice 4 — final release verification:** conduct reviewer-style audit; deploy only if changed code is verified and still linked to `unrot-build-challenge`; verify the public site afterward.
 
 ## Exact next slice
 
-Resume Slice 3 after re-authenticating GitHub CLI. Then inspect whether `sauravoole-ai/unrot-d1-retention-product-case` already exists before initializing Git or creating anything.
+Perform Slice 4: final reviewer-style audit and release verification. Fix only meaningful remaining issues. Deploy only if source changes are verified and the existing `unrot-build-challenge` linkage is still confirmed.
 
 ## Files changed
 
@@ -71,11 +72,11 @@ Resume Slice 3 after re-authenticating GitHub CLI. Then inspect whether `sauravo
 - `package.json` — created with dependency-free `test` and `check` scripts.
 - `README.md` — created.
 - `docs/product-case.md` — created.
+- `docs/agent-tasks/current.md` — updated for Slice 3 publication state.
 
 ## Known risks and blockers
 
-- The workspace is not a Git repository, so there is still no branch, HEAD SHA, remote, or working-tree state yet.
-- GitHub CLI is installed, but its active `sauravoole-ai` token is invalid. Required user action: `gh auth login -h github.com`.
+- No active publication blocker.
 - Browser automation is unavailable locally; use source and local HTTP checks until browser tooling is available.
 - The project source is a Vercel-linked subdirectory; keep repository documentation outside it unless deployment inclusion is explicitly considered.
 
@@ -86,8 +87,11 @@ Resume Slice 3 after re-authenticating GitHub CLI. Then inspect whether `sauravo
 
 ## GitHub/repository state
 
-- Git is not initialized in `Unrot_PM`; no remote, branch, HEAD SHA, or commit history exists.
-- `gh` version 2.98.0 is installed, but authentication for `sauravoole-ai` failed because the active token is invalid. No intended-repository existence check, repository creation, or push was attempted.
+- Repository: `https://github.com/sauravoole-ai/unrot-d1-retention-product-case` (public).
+- Remote: `origin` → `https://github.com/sauravoole-ai/unrot-d1-retention-product-case.git`.
+- Branch: `main`, tracking `origin/main`.
+- Initial commit: `ec436ea5083ecec3218603e8b7a214affab4f2bb` (`feat: publish Unrot D1 retention product case`).
+- GitHub CLI is authenticated as `sauravoole-ai`; the failed-token blocker is resolved.
 
 ## DO NOT REDO
 
@@ -97,3 +101,4 @@ Resume Slice 3 after re-authenticating GitHub CLI. Then inspect whether `sauravo
 - Do not treat simulated prototype functionality as a production backend capability.
 - Do not replace the tested state-restoration boundary with shallow localStorage parsing; it prevents incomplete saved builder data from breaking later screens.
 - Do not move README, tests, or product documentation into `unrot-v4-clean-deploy/`; the dry-run deployment manifest is intentionally limited to the four application files.
+- Do not create a second GitHub repository; the public portfolio repository is `sauravoole-ai/unrot-d1-retention-product-case`.
