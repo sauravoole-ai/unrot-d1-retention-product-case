@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Unrot Build Mode — product management retention prototype." />
+  <title>Unrot Build Mode — Learn. Build. Earn.</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar" aria-label="Prototype product navigation">
+      <div class="brand-wrap">
+        <button class="brand" data-action="reset-home" aria-label="Unrot home">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>unrot</span>
+        </button>
+        <span class="concept-chip">Build Mode concept</span>
+      </div>
+      <nav class="mini-nav" aria-label="Unrot product sections">
+        <span>Home</span><span class="active">Courses</span><span>Interview</span><span>News</span>
+      </nav>
+      <div class="streak" title="Illustrative existing streak"><span aria-hidden="true">🔥</span> 4</div>
+    </header>
+
+    <main class="product-frame">
+      <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+      <section id="screen" class="screen" aria-live="polite"></section>
+    </main>
+
+    <footer>
+      <span>Concept prototype for a product internship case.</span>
+      <span>AI output, recognition, leaderboard, reminders and rewards are simulated.</span>
+    </footer>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

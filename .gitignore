@@ -1,0 +1,12 @@
+# Local and deployment metadata
+.env*
+**/.env*
+.vercel/
+**/.vercel/
+
+# Dependencies and generated verification output
+node_modules/
+coverage/
+
+# Source archive retained locally for comparison, not publication
+unrot-v4-redeploy.zip
