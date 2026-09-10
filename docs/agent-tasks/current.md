@@ -6,7 +6,7 @@ Prepare the existing validated static Unrot D1 Retention prototype for a credibl
 
 ## Current phase
 
-Slice 3 is complete; Slice 4 is next.
+Slice 4 release verification is complete.
 
 ## Completed work
 
@@ -21,6 +21,7 @@ Slice 3 is complete; Slice 4 is next.
 - Added a root `.gitignore`, Node-standard-library package scripts, a concise recruiter-facing README, and a product-case document.
 - Expanded deterministic coverage for quiz scoring, prompt strength, malformed proof handling, and share-link construction.
 - Initialized Git on `main`, created the intended public GitHub repository, pushed the verified initial commit, and added repository topics.
+- Completed final repository, deployment-manifest, and production-response verification; deployed the verified source only to the existing Vercel project.
 
 ## Baseline checks
 
@@ -32,6 +33,8 @@ Slice 3 is complete; Slice 4 is next.
 - `npm.cmd run check` — app and core syntax checks plus all 6 tests pass.
 - Local static HTTP smoke check — `index.html`, `styles.css`, `app.js`, and `core.mjs` each returned HTTP 200.
 - Browser automation is unavailable on this machine (`agent-browser` command not found), so no browser-console or viewport audit was run.
+- Final dry run: exactly four deployable files (`index.html`, `styles.css`, `app.js`, `core.mjs`); `.env.local`, `.gitignore`, and `.vercel/` excluded.
+- Final production verification: the public alias resolves to deployment `dpl_FouNN4osswE6qJqo9VZC3auw44ZW` in `READY` state; unauthenticated root, CSS, app, and core requests each returned HTTP 200 with normal source content.
 
 ## Audit summary
 
@@ -43,22 +46,20 @@ Slice 3 is complete; Slice 4 is next.
 - Existing responsive CSS and semantic baseline (`main`, `nav`, `fieldset`, labels, module script).
 - Production project linkage already exists; the current reviewer-facing deployment was verified in the preceding release work.
 
-### Concrete gaps
+### Remaining limitation
 
-- No Git repository, remote, branch, commits, or public GitHub repository yet.
-- Prototype accessibility, responsive behavior, browser error state, URL-proof handling, share fallback, and state-transition edge cases need further targeted review.
-- Metadata and recruiter-facing repository explanation need deliberate improvement in later slices.
+- Browser automation is unavailable on this machine, so a fresh automated browser-console, interaction-flow, and viewport audit was not possible. Local HTTP, deterministic tests, source review, and public HTTP verification were completed instead.
 
 ## Phased plan
 
 1. **Slice 1 — product + code hardening:** complete. It added a tested localStorage-state normalization boundary and CSS focus/reduced-motion safeguards.
 2. **Slice 2 — tests, documentation, and portfolio polish:** complete. It added lightweight deterministic verification, package scripts, root exclusions, README, and product-case documentation.
 3. **Slice 3 — GitHub publication:** complete. The intended public repository was created and `main` was pushed without force-pushing or creating a duplicate.
-4. **Slice 4 — final release verification:** conduct reviewer-style audit; deploy only if changed code is verified and still linked to `unrot-build-challenge`; verify the public site afterward.
+4. **Slice 4 — final release verification:** complete. The verified source was deployed to the existing `unrot-build-challenge` project and its public alias was checked without Vercel authentication.
 
 ## Exact next slice
 
-Perform Slice 4: final reviewer-style audit and release verification. Fix only meaningful remaining issues. Deploy only if source changes are verified and the existing `unrot-build-challenge` linkage is still confirmed.
+No implementation slice is planned. On `verify`, re-run `npm.cmd run check`, Git state checks, deployment manifest inspection, and public HTTP integrity checks. Do not redeploy unless source changes require it.
 
 ## Files changed
 
@@ -73,6 +74,7 @@ Perform Slice 4: final reviewer-style audit and release verification. Fix only m
 - `README.md` — created.
 - `docs/product-case.md` — created.
 - `docs/agent-tasks/current.md` — updated for Slice 3 publication state.
+- `docs/agent-tasks/current.md` — updated for final release state.
 
 ## Known risks and blockers
 
@@ -83,7 +85,9 @@ Perform Slice 4: final reviewer-style audit and release verification. Fix only m
 ## Deployment state
 
 - Existing project: `unrot-build-challenge` (linked from `unrot-v4-clean-deploy/.vercel/project.json`).
-- The preceding release work verified the reviewer-facing production URL serves the clean staged deployment. Bootstrap made no Vercel changes or deployment.
+- Final deployment: `dpl_FouNN4osswE6qJqo9VZC3auw44ZW` (`READY`, production).
+- Deployment URL: `https://unrot-build-challenge-kt6uue8nn-sauravoole-1831s-projects.vercel.app`.
+- Public alias: `https://unrot-build-challenge.vercel.app` resolves to that exact deployment and returns real HTML with HTTP 200.
 
 ## GitHub/repository state
 
@@ -102,3 +106,4 @@ Perform Slice 4: final reviewer-style audit and release verification. Fix only m
 - Do not replace the tested state-restoration boundary with shallow localStorage parsing; it prevents incomplete saved builder data from breaking later screens.
 - Do not move README, tests, or product documentation into `unrot-v4-clean-deploy/`; the dry-run deployment manifest is intentionally limited to the four application files.
 - Do not create a second GitHub repository; the public portfolio repository is `sauravoole-ai/unrot-d1-retention-product-case`.
+- Do not redeploy merely to repeat verification; the final public alias already resolves to the verified deployment above.
