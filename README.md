@@ -2,7 +2,7 @@
 
 A working product prototype exploring whether an applied Build Mode and same-artifact Day-1 continuation can improve early retention in Unrot's short-form AI learning experience.
 
-This is an independent product-internship assignment prototype and concept, not an official Unrot production feature.
+This is an independent portfolio case based on a time-boxed product-management exercise. It is not an official Unrot production feature and is not affiliated with or endorsed by Unrot or Build Fast With AI.
 
 ## Live prototype
 
@@ -10,9 +10,9 @@ https://unrot-build-challenge.vercel.app
 
 ## Product problem
 
-The assignment is to improve strict calendar-day D1 retention: the percentage of new users who return on the calendar day after their first session. The stated baseline is 16%; the reference target is 22%.
+The product question is whether a learner has a useful, bounded artifact they began today and a concrete reason to return the next calendar day to improve it.
 
-The product question is not simply how to add rewards. It is whether a user has a useful, bounded artifact they began today and a concrete reason to return tomorrow to improve it.
+The case focuses on early next-day retention without publishing private hiring-assignment metrics or internal business constraints.
 
 ## Hypothesis and experience
 
@@ -40,13 +40,13 @@ The prototype deliberately has no backend. AI/model output, reminders, rewards, 
 
 ## MVP versus roadmap
 
-The four-week MVP is limited to the applied Build Mode loop for the initial cohort. Rich sharing, challenges, leaderboards, partner rewards, builder profiles, and credential infrastructure are roadmap concepts, not shipping MVP commitments.
+The MVP is limited to the applied Build Mode loop for an initial cohort within a short delivery window. Rich sharing, challenges, leaderboards, partner rewards, builder profiles, and credential infrastructure are roadmap concepts, not shipping MVP commitments.
 
 ## Measurement approach
 
-The primary metric is strict calendar D1 for eligible new users. A production experiment would compare the eligible cohort's return rate against the 16% baseline toward the 22% reference, while monitoring lesson completion, Build Mode adoption, build completion, next-day artifact continuation, and negative signals such as session friction or drop-off.
+The primary metric is strict calendar-day D1 for eligible new users. A production experiment would compare an eligible treatment cohort with an appropriate control while monitoring lesson completion, Build Mode adoption, build completion, next-day artifact continuation, and negative signals such as session friction or drop-off.
 
-No retention result, usage result, testimonial, partnership, or revenue impact is claimed by this prototype. See [the product case](docs/product-case.md) for the operating hypothesis, guardrails, and four-week plan.
+No retention result, usage result, testimonial, partnership, or revenue impact is claimed by this prototype. See [the product case](docs/product-case.md) for the operating hypothesis, guardrails, and delivery approach.
 
 ## Project structure
 
@@ -74,7 +74,7 @@ Then open `http://127.0.0.1:4173` in a browser.
 
 ## Deployment
 
-The existing Vercel project is `unrot-build-challenge`. Deployment is intentionally guarded: only verified changes may be deployed to that existing project, and this repository does not create another Vercel project.
+The prototype is deployed on Vercel. This repository contains the verified static source used for the public demonstration.
 
 ## Limitations
 
